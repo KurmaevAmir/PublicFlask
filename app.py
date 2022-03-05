@@ -3,14 +3,12 @@ import os
 from flask import Flask
 
 app = Flask(__name__)
+run_with_ngrok(app)
 
 
-@app.route('/')
+@app.route("/")
 def index():
-    return """<html>
-    Привет от приложения Flask
-    <br>
-    <html>"""
+    return "Привет от приложения Flask"
 
 
 if __name__ == '__main__':
